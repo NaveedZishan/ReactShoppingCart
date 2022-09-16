@@ -12,7 +12,7 @@ console.log(Products);
         <div id="cartIconDiv">  <h1>WISDOM SUPER MART.CORPORATION </h1>
         <hr />
             <Link to="/Cart">
-                <h1><BsCart4/></h1>
+                <h1><BsCart4/> Click Me</h1>
 
             </Link>
 <hr />
@@ -42,10 +42,10 @@ console.log(Products);
                                     Title: {product.title}
                                 </li>
                                 <li>
-                                    Price: {product.price} {`$`}
+                                    Price: {product.price} 
                                 </li>
                                 <li>
-                                    Rating:{product.rating} {`  Out of 5`}
+                                    Rating:{product.rating} 
                                 </li>
                             </ul>
                 <hr />
