@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useEffect,useState} from "react";
+import { Route,Routes } from "react-router-dom";
+import ApiFetch from "./ApiFetch";
+import Cart from "./Cart";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+const[Products,setProducts]=useState([])
+const[cart,setCart]=useState([])
+
+useEffect(()=>{
+fetch("https://dummyjson.com/products")
+.then((Response)=>Response.json())
+.then((data)=>{
+  setProducts(data.products)
+})
+
+},[])
+
+const addeditems=(product)=>{
+setCart((prevState)=>[...prevState,product])
+
 }
+return(<>
+<Routes>
 
-export default App;
+<Route path="/" element={<ApiFetch Products={Products}  addeditems={addeditems} />}  />
+<Route path="cart" element={<Cart cart={cart} />} />
+</Routes>
+</>)
+
+}
+export default App
