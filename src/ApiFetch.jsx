@@ -13,7 +13,7 @@ console.log(Products);
         <hr />
             <Link to="/Cart">
                 <h1><BsCart4/></h1>
-{/* <h2>date:{}</h2> */}
+
             </Link>
 <hr />
         </div>
