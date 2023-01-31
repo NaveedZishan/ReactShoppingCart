@@ -1,5 +1,6 @@
 import React from "react";
 import { BsCart4 } from "react-icons/bs"
+import {BsCartPlusFill} from "react-icons/bs"
 import { Link } from "react-router-dom";
 import "./cart.css"
 //import calender from "./calender";
@@ -12,7 +13,8 @@ console.log(Products);
         <div id="cartIconDiv">  <h1>WISDOM SUPER MART.CORPORATION </h1>
         <hr />
             <Link to="/Cart">
-                <h1><BsCart4/> Click Me</h1>
+                <h1><BsCart4/></h1>
+                <h2><BsCartPlusFill/></h2>
 
             </Link>
 <hr />
@@ -22,7 +24,6 @@ console.log(Products);
                 return(
 
            <div>   
-            
             <div> ProductNo:{product.id} 
             <div>
             

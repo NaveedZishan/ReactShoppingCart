@@ -22,18 +22,17 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, } from "react-router-dom";
 //import ApiFetch from './ApiFetch';
 
-import App from './App';
+// import App from './App';
+import MyApp from './MyApp';
+// import MyApp from './MyApp';
 //import Cart from './Cart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<BrowserRouter>
 
-
-
-<App />
-
-
+{/* <App /> */}
+<MyApp/>
 
 </BrowserRouter>);
 
